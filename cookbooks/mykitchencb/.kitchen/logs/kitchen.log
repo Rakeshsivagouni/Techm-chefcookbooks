@@ -1,0 +1,3 @@
+I, [2019-10-19T08:21:24.485622 #4235]  INFO -- Kitchen: -----> Starting Kitchen (v2.3.3)
+I, [2019-10-19T08:21:25.286510 #4235]  INFO -- Kitchen: -----> Destroying <default-kitchenvm1>...
+I, [2019-10-19T08:21:25.498615 #4235]  INFO -- Kitchen: -----> Kitchen is finished. (0m1.01s)

@@ -1,0 +1,3 @@
+I, [2019-10-19T08:21:25.286595 #4235]  INFO -- default-kitchenvm1: -----> Destroying <default-kitchenvm1>...
+I, [2019-10-19T08:21:25.497314 #4235]  INFO -- default-kitchenvm1: EC2 instance <i-0f49cb62ed5e01129> destroyed.
+I, [2019-10-19T08:21:25.498020 #4235]  INFO -- default-kitchenvm1: Finished destroying <default-kitchenvm1> (0m0.21s).

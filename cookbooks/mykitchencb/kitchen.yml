@@ -1,0 +1,31 @@
+---
+driver:
+  name: ec2
+  aws_ssh_key_id: devops
+  security_group_ids: ["sg-0ef5991d8b06ae6bd"]
+  region: ap-south-1
+  availability_zone: a
+  require_chef_omnibus: true
+  subnet_id: subnet-7a6b4612
+  instance_type: t2.micro
+  associate_public_ip: true
+provisioner:
+   name: chef_zero
+platforms:
+  - name: kitchenvm1
+    driver:
+      image_id: ami-0cb0e70f44e1a4bb5
+    block_device_mappings:
+      - device_name: /dev/sda1
+        ebs:
+          volume_size: 10
+          delete_on_termination: true
+    transport:
+      ssh_key: /tmp/devops.pem
+      connection_timeout: 300
+      connection_retries: 5
+      username: ec2-user
+suites:
+  - name: default
+    run_list:
+      - recipe[mykitchencb::install_apache]
